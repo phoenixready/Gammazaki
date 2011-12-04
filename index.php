@@ -1,22 +1,27 @@
 <?php
+?>
 <html>
 	<head>
 		<title>Gammazaki.com</title>
-		<script src="js/jquery-1.7.1.min.js"/>
+		<script src="js/jquery-1.7.1.min.js"></script>
 		<script type="text/javascript">
 			var contentdiv = undefined;
 			function kewltimez() {
-				var fundiv = $("<div class='kewltext' style='position:absolute;left:50%;top:50%;sbackground-color:#1EB14C;padding:10px;'>Gammazaki.com</div>");
+				alert("KEWL");
+				var fundiv = $("<div class='kewltext' style='position:absolute;left:50%;top:50%;border-radius:15px;background-color:#1EB14C;padding:10px;'>Gammazaki.com</div>");
 				fundiv.mouseover(function() {
-					alert("LOL"!);
+					var randX = Math.random() * contentdiv.width();
+					var randY = Math.random() * contentdiv.height();
+					fundiv.css("left", randX + "px");
+					fundiv.css("top", randY + "px");
 				});
 				contentdiv.append(fundiv);
 			}
 			
-			$(document).ready() {
-				kewldiv = $("#contentzone");
+			$(document).ready(function() {
+				contentdiv = $("#contentzone");
 				kewltimez();
-			}
+			});
 		</script>	
 	</head>
 	<body>
@@ -25,4 +30,4 @@
 		</div>
 	</body>
 </html>
-?>
+
